@@ -1,69 +1,48 @@
-# React + TypeScript + Vite
+# Slipify 🧾  
+**Turn your till slips into insights.**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Slipify is a lightweight till slip reader that helps users **track, analyze, and make smarter decisions about their spending**.  
+By simply uploading a receipt/till slip, Slipify extracts purchase data, structures it, and provides easy-to-understand insights.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 📸 **Till Slip Upload** – Upload images of your slips to capture purchase data.  
+- 🔍 **OCR-Powered Parsing** – Automatically extracts merchant, items, prices, and totals.  
+- 📊 **Spending Analysis** – View breakdowns of where your money goes.  
+- 💾 **Storage & History** – Keep a history of all your past slips.  
+- 📈 **Insights for Better Decisions** – Spot patterns and manage your budget more effectively.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- **Backend:** FastAPI (Python), PostgreSQL  
+- **Frontend:** React, TailwindCSS  
+- **OCR:** Google Vision API  
+- **Deployment:** Vercel (frontend), Render/Heroku/Cloud Run (backend)  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔮 Roadmap
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+ - User authentication & profiles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ - Categorize expenses automatically
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ - Export data to CSV/Excel
+
+ - Spending dashboards & visualizations
+
+ - Mobile-friendly version
+
+### Prerequisites
+- Python 3.10+  
+- Node.js & npm 
+- PostgreSQL  
+
+### Clone the repository
+```bash
+git clone https://github.com/your-username/slipify.git
+cd slipify
