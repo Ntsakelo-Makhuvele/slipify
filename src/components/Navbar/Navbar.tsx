@@ -1,11 +1,10 @@
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon,ChevronRightIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
   { name: 'Company', href: '#' },
 ]
 
@@ -13,10 +12,10 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="">
-            <div>
+        <div className="sticky left-0 right-0 top-0 z-100">
+            <div className=''>
                 {/* <p className="text-2xl text-slate-900 font-medium">Slipify.com</p> */}
-                 <header className="absolute inset-x-0 top-0 z-50 w-[90%] m-auto  border border-gray-300 mt-4 rounded-lg">
+                 <header className="absolute inset-x-0 top-0  w-[85%] m-auto  border border-gray-300 mt-2 rounded-lg bg-white z-100">
         <nav aria-label="Global" className="flex items-center justify-between p-3 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -42,10 +41,12 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+            <a href="#" className="text-sm/6 font-semibold text-gray-900 p-1.5">
+              Sign in 
             </a>
+             <a href="" className="ml-2 bg-zinc-800 p-1.5 text-white rounded-md text-sm">Get Started <ChevronRightIcon className='size-4 mb-1 inline'/></a>
           </div>
+          
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />

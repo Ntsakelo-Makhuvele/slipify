@@ -1,10 +1,11 @@
 import Navbar from "../../components/Navbar";
+import { ArrowTrendingUpIcon, WalletIcon,MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
     return (
         <div>
             <Navbar />
-            <div className="relative isolate px-6 pt-14 lg:px-8">
+            <div className="relative isolate px-6 pt-14 lg:px-8 z-0">
 
                 <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -37,23 +38,23 @@ const Home = () => {
                     aria-hidden="true"
                     className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
                 >
-
+                  
                 </div>
             </div>
             <div className="md:flex">
                 <div className="md:flex-1">
-                    <div className="h-[150px] w-[150px] m-auto mb-5 rounded-[50%] bg-emerald-500">
-
+                    <div className="h-[150px] w-[150px] grid items-center m-auto mb-5 rounded-[50%] bg-emerald-500">
+                       <ArrowTrendingUpIcon className="size-15 block m-auto"/>
                     </div>
                 </div>
                 <div className="md:flex-1">
-                    <div className="h-[150px] w-[150px] m-auto mb-5 rounded-[50%] bg-yellow-500">
-
+                    <div className="h-[150px] w-[150px] grid items-center m-auto mb-5 rounded-[50%] bg-yellow-500">
+                        <MagnifyingGlassIcon className="size-15 block m-auto"/>
                     </div>
                 </div>
                 <div className="md:flex-1">
-                    <div className="h-[150px] w-[150px] m-auto mb-5 rounded-[50%] bg-red-500">
-
+                    <div className="h-[150px] w-[150px] m-auto grid items-center mb-5 rounded-[50%] bg-red-500">
+                       <WalletIcon className="size-15 block m-auto"/>
                     </div>
                 </div>
             </div>

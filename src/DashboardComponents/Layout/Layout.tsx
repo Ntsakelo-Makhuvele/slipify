@@ -1,12 +1,13 @@
-import { ChartBarIcon,ArrowUpTrayIcon, ClipboardDocumentIcon,ArrowTrendingUpIcon,Cog6ToothIcon, Bars3Icon,XMarkIcon } from "@heroicons/react/24/outline";
+import { ChartBarIcon,ArrowUpTrayIcon, ClipboardDocumentIcon,ArrowTrendingUpIcon,Cog6ToothIcon, Bars3Icon,XMarkIcon,Squares2X2Icon,WalletIcon,BellIcon,SparklesIcon } from "@heroicons/react/24/outline";
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogPanel } from '@headlessui/react'
 
+
 const Layout = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
         return (
-        <div className="md:flex">
+        <div className="md:flex gap-4">
             <div className="md:flex-2 h-[100vh] invisible bg-indigo-500 border border-gray-200 border-left fixed top-0 left-0 right-0 bottom-0 md:relative md:visible">
                <div className="m-5 h-[60px]"> 
                      <div className="flex lg:flex-1">
@@ -23,8 +24,8 @@ const Layout = () => {
                    </div>
                </div>   
                <div className="">
-                 <Link to="/dashboard">
-                   <p className="text-sm m-5  p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900 focus:bg-gray-300"><ChartBarIcon className="size-4 inline-block relative bottom-[2px] mr-1"/>Dashboard</p>
+                 <Link to="/dashboard/upload">
+                   <p className="text-sm m-5  p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900 focus:bg-gray-300"><Squares2X2Icon className="size-4 inline-block relative bottom-[2px] mr-1"/>Dashboard</p>
                  </Link>
                </div> 
                  <div className="">
@@ -34,17 +35,22 @@ const Layout = () => {
                </div> 
                  <div className="">
                  <Link to="/dashboard">
-                   <p className="text-sm m-5  p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><ClipboardDocumentIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Expenses</p>
-                 </Link>
-               </div> 
-                 <div className="">
-                 <Link to="/dashboard">
-                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><ArrowTrendingUpIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Analytics</p>
+                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><ArrowTrendingUpIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Spendings</p>
                  </Link>
                </div> 
                <div className="">
                  <Link to="/dashboard">
-                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><Cog6ToothIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Settings</p>
+                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><WalletIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Goals</p>
+                 </Link>
+               </div>
+                <div className="">
+                 <Link to="/dashboard">
+                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><SparklesIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>AI Assistant </p>
+                 </Link>
+               </div>
+               <div className="">
+                 <Link to="/dashboard">
+                   <p className="text-sm m-5 p-2 rounded-[5px] text-white hover:bg-white hover:text-slate-900"><BellIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Notifications </p>
                  </Link>
                </div>
                
@@ -58,7 +64,7 @@ const Layout = () => {
 
 
             </div>
-            <div className="md:flex-10 h-[100vh]">
+            <div className="md:flex-10 h-[100vh] w-[90%] m-auto md:w-[100%] max-h-[100vh] md:overflow-x-scroll">
                 <Outlet />
             </div>
                     <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -97,12 +103,7 @@ const Layout = () => {
                </div> 
                  <div className="">
                  <Link to="/dashboard">
-                   <p className="text-sm m-5  p-2 rounded-[5px] hover:bg-gray-200"><ClipboardDocumentIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Expenses</p>
-                 </Link>
-               </div> 
-                 <div className="">
-                 <Link to="/dashboard">
-                   <p className="text-sm m-5 p-2 rounded-[5px] hover:bg-gray-200"><ArrowTrendingUpIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Analytics</p>
+                   <p className="text-sm m-5 p-2 rounded-[5px] hover:bg-gray-200"><ArrowTrendingUpIcon className="size-4 inline-block relative bottom-[2px] mr-2"/>Spendings</p>
                  </Link>
                </div> 
                <div className="">
