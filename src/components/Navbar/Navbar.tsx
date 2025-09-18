@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="sticky left-0 right-0 top-0 z-100">
             <div className=''>
                 {/* <p className="text-2xl text-slate-900 font-medium">Slipify.com</p> */}
-                 <header className="absolute inset-x-0 top-0  w-[85%] m-auto  border border-gray-300 mt-2 rounded-lg bg-white z-100">
+                 <header className="absolute inset-x-0 top-0  w-[87%] m-auto  border border-gray-300 mt-2 rounded-lg bg-white z-100">
         <nav aria-label="Global" className="flex items-center justify-between p-3 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -41,16 +41,16 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900 p-1.5">
+            <a href="/login" className="text-sm/6 font-semibold text-gray-900 p-1.5">
               Sign in 
             </a>
-             <a href="" className="ml-2 bg-zinc-800 p-1.5 text-white rounded-md text-sm">Get Started <ChevronRightIcon className='size-4 mb-1 inline'/></a>
+             <a href="/signup" className="ml-2 bg-zinc-800 p-1.5 text-white rounded-md text-sm">Get Started <ChevronRightIcon className='size-4 mb-1 inline'/></a>
           </div>
           
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-150 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
@@ -80,10 +80,16 @@ const Navbar = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="/login"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Sign in
+                  </a>
+                   <a
+                    href="/signup"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Get Started
                   </a>
                 </div>
               </div>

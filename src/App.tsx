@@ -7,6 +7,8 @@ import Upload from './DashboardComponents/Upload'
 import Overview from './DashboardComponents/Overview'
 import Goals from './DashboardComponents/Goals'
 import Spendings from './DashboardComponents/Spendings/Spendings'
+import Signup from './screens/Signup'
+import Login from './screens/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +22,8 @@ function App() {
         <Route path="/dashboard/goals" element={<Goals />} /> 
         <Route path="/dashboard/spendings" element={<Spendings />} /> 
       </Route>
+      <Route path='/signup' element={<Signup />} />
+      <Route path="/login" element={<Login />} /> 
     </Routes>
   )
 }
