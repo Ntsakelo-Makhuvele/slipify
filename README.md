@@ -42,6 +42,15 @@ By simply uploading a receipt/till slip, Slipify extracts purchase data, structu
 - Node.js & npm 
 - PostgreSQL  
 
+### Have a look at some pages
+
+https://slipify.vercel.app/
+
+
+
+
+
+
 ### Clone the repository
 ```bash
 git clone https://github.com/your-username/slipify.git
