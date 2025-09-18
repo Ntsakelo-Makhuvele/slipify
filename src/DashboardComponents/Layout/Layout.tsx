@@ -1,4 +1,4 @@
-import { ChartBarIcon,ArrowUpTrayIcon, ClipboardDocumentIcon,ArrowTrendingUpIcon,Cog6ToothIcon, Bars3Icon,XMarkIcon,Squares2X2Icon,WalletIcon,BellIcon,SparklesIcon } from "@heroicons/react/24/outline";
+import { ChartBarIcon,ArrowUpTrayIcon,ArrowTrendingUpIcon,Cog6ToothIcon, Bars3Icon,XMarkIcon,Squares2X2Icon,WalletIcon,BellIcon,SparklesIcon } from "@heroicons/react/24/outline";
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogPanel } from '@headlessui/react'

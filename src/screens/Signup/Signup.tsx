@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon,ArrowTrendingUpIcon } from '@heroicons/react/20/solid'
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { useGoogleLogin } from '@react-oauth/google';
 import googleImage from '../../assets/search.png'
 import Divider from '@mui/material/Divider';
